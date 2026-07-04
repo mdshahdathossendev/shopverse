@@ -3,10 +3,14 @@ import "./globals.css";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className="bg-background text-foreground">
-        <Providers>{children}</Providers>
-      </body>
-    </html>
+   <html>
+    <body>
+    <div>
+   <Providers>
+     {children}
+   </Providers>
+    </div>
+   </body>
+   </html>
   );
 }

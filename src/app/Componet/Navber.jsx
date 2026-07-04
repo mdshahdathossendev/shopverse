@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { Search, ShoppingCart, User, Menu, X } from 'lucide-react';
 import { ThemeSwitch } from './ThemToogle';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +56,9 @@ export default function Navbar() {
               <div className="hidden sm:block h-5 w-[1px] bg-slate-200 dark:bg-gray-800"></div>
 
               <button className="hidden sm:block hover:text-slate-900 dark:hover:text-white p-1" aria-label="Profile">
+                <Link href={'/sinin'}>
                 <User className="w-5 h-5" />
+                </Link>
               </button>
 
               {/* Mobile Menu Button */}
